@@ -74,5 +74,25 @@ public class Fraction {
         // TODO Auto-generated method stub
         return false;
     }
+
+    public Fraction sumar(Fraction operador) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    public Fraction restar(Fraction operador) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    public Fraction multiplicar(Fraction operador) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    public Fraction dividir(Fraction operador) {
+        // TODO Auto-generated method stub
+        return null;
+    }
     
 }
