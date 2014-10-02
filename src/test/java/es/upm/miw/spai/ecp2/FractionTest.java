@@ -42,5 +42,13 @@ public class FractionTest {
     public void testIsImpropia() {
         assertFalse(this.fraction.isImpropia());
     }
+    
+    @Test
+    public void testIsEquivalente() {
+        Fraction equivalente = new Fraction(20, 15);
+        Fraction noEquivalente = new Fraction(21, 15);
+        assertTrue(this.fraction.isEquivalente(equivalente));
+        assertFalse(this.fraction.isEquivalente(noEquivalente));
+    }
 
 }
