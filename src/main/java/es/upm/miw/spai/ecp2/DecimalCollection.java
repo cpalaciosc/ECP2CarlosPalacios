@@ -37,7 +37,11 @@ public class DecimalCollection {
 
     public double multiply() {
         // TODO Auto-generated method stub
-        return 0;
+    	double mul = 1;
+        for (double item : this.collection) {
+            mul = mul*item;
+        }
+        return mul;
     }
 
 }
