@@ -43,8 +43,7 @@ public class Point {
     }
 
 	public double distancia(Point point) {
-		// TODO Auto-generated method stub
-		return 0;
+		return Math.hypot(point.x-this.x, point.y-this.y);
 	}
     
 }

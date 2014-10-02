@@ -39,6 +39,6 @@ public class User {
     }
     
     public String upperName(){
-    	return "Carlos Palacios";
+    	return this.fullName().toUpperCase();
     }
 }
