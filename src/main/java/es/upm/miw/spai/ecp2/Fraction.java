@@ -59,5 +59,15 @@ public class Fraction {
     public double decimal() {
         return (double) numerator / denominator;
     }
+
+    public boolean isPropia() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    public boolean isImpropia() {
+        // TODO Auto-generated method stub
+        return false;
+    }
     
 }
