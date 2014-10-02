@@ -85,9 +85,9 @@ public class Fraction {
         return null;
     }
 
-    public Fraction multiplicar(Fraction operador) {
+    public Fraction multiplicar(Fraction fraction) {
         // TODO Auto-generated method stub
-        return null;
+        return new Fraction(numerator * fraction.numerator, denominator * fraction.denominator);
     }
 
     public Fraction dividir(Fraction operador) {
