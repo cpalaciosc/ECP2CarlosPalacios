@@ -61,13 +61,11 @@ public class Fraction {
     }
 
     public boolean isPropia() {
-        // TODO Auto-generated method stub
-        return false;
+        return this.getNumerator() < this.getDenominator();
     }
 
     public boolean isImpropia() {
-        // TODO Auto-generated method stub
-        return false;
+        return !this.isPropia();
     }
 
     public boolean isEquivalente(Fraction equivalente) {
