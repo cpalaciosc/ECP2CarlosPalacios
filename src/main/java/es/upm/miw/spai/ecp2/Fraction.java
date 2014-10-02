@@ -71,8 +71,7 @@ public class Fraction {
     }
 
     public boolean isEquivalente(Fraction equivalente) {
-        // TODO Auto-generated method stub
-        return false;
+        return (this.numerator*equivalente.denominator) == (this.denominator*equivalente.numerator);
     }
 
     public Fraction sumar(Fraction operador) {
