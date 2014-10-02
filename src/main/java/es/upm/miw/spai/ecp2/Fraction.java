@@ -35,61 +35,68 @@ package es.upm.miw.spai.ecp2;
  * 
  */
 public class Fraction {
-    private int numerator;
+	private int numerator;
 
-    private int denominator;
+	private int denominator;
 
-    public Fraction(int numerator, int denominator) {
-        this.numerator = numerator;
-        this.denominator = denominator;
-    }
+	public Fraction(int numerator, int denominator) {
+		this.numerator = numerator;
+		this.denominator = denominator;
+	}
 
-    public Fraction() {
-        this(1, 1);
-    }
+	public Fraction() {
+		this(1, 1);
+	}
 
-    public int getNumerator() {
-        return numerator;
-    }
+	public int getNumerator() {
+		return numerator;
+	}
 
-    public int getDenominator() {
-        return denominator;
-    }
+	public int getDenominator() {
+		return denominator;
+	}
 
-    public double decimal() {
-        return (double) numerator / denominator;
-    }
+	public double decimal() {
+		return (double) numerator / denominator;
+	}
 
-    public boolean isPropia() {
-        return this.getNumerator() < this.getDenominator();
-    }
+	public boolean isPropia() {
+		return this.getNumerator() < this.getDenominator();
+	}
 
-    public boolean isImpropia() {
-        return !this.isPropia();
-    }
+	public boolean isImpropia() {
+		return !this.isPropia();
+	}
 
-    public boolean isEquivalente(Fraction equivalente) {
-        return (this.numerator*equivalente.denominator) == (this.denominator*equivalente.numerator);
-    }
+	public boolean isEquivalente(Fraction equivalente) {
+		return (this.numerator * equivalente.denominator) == (this.denominator * equivalente.numerator);
+	}
 
-    public Fraction sumar(Fraction operador) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+	public Fraction sumar(Fraction operador) {
+		// TODO Auto-generated method stub
+		int numerador = this.getNumerator() * operador.getDenominator()
+				+ operador.getNumerator() * this.getDenominator();
+		int denominador = this.getDenominator() * operador.getDenominator();
+		return new Fraction(numerador, denominador);
+	}
 
-    public Fraction restar(Fraction operador) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+	public Fraction restar(Fraction operador) {
+		// TODO Auto-generated method stub
+		int numerador = (numerator*operador.denominator) - (denominator*operador.numerator);
+		int denominador= denominator * operador.denominator; 
+		return new Fraction(numerador,denominador);
+	}
 
-    public Fraction multiplicar(Fraction fraction) {
-        // TODO Auto-generated method stub
-        return new Fraction(numerator * fraction.numerator, denominator * fraction.denominator);
-    }
+	public Fraction multiplicar(Fraction fraction) {
+		// TODO Auto-generated method stub
+		return new Fraction(numerator * fraction.numerator, denominator
+				* fraction.denominator);
+	}
 
-    public Fraction dividir(Fraction operador) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-    
+	public Fraction dividir(Fraction operador) {
+		// TODO Auto-generated method stub
+		return new Fraction(numerator * operador.denominator, denominator
+				* operador.numerator);
+	}
+
 }
