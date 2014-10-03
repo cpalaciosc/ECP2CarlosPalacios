@@ -35,12 +35,12 @@ public class FractionTest {
 
     @Test
     public void testIsPropia() {
-        assertTrue(this.fraction.isPropia());
+        assertFalse(this.fraction.isPropia());
     }
 
     @Test
     public void testIsImpropia() {
-        assertFalse(this.fraction.isImpropia());
+        assertTrue(this.fraction.isImpropia());
     }
 
     @Test
